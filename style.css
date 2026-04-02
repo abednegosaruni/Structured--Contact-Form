@@ -1,0 +1,183 @@
+/* Base page style */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, hsl(210, 74%, 67%) 0%, #9db970 45%, #a14166 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 26px;
+}
+
+/* Form container */
+form {
+  width: min(100%, 780px);
+  background: hsl(240, 2%, 9%);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(62, 150, 62, 0.18);
+  padding: 24px 30px 30px;
+  border: 1px solid rgba(100, 116, 139, 0.16);
+}
+
+/* Fieldset and legend style */
+fieldset {
+  border: 1px solid rgba(34, 228, 228, 0.3);
+  border-radius: 12px;
+  margin: 16px 0;
+  padding: 18px 16px 16px;
+  background: #29cabd;
+}
+
+fieldset + fieldset {
+  margin-top: 14px;
+}
+
+legend {
+  padding: 0 10px;
+  font-weight: 700;
+  color: #0f172a;
+  background: linear-gradient(90deg, #f8fafc, #e2e8f0);
+  border: 1px solid rgba(100, 116, 139, 0.35);
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+  font-size: 0.96rem;
+}
+
+/* Label + control stacking */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.93rem;
+  color: #334155;
+  font-weight: 600;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+  padding: 10px 12px;
+  font-size: 0.96rem;
+  color: #0f172a;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.21);
+}
+
+select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #64748b 50%),
+    linear-gradient(135deg, #64748b 50%, transparent 50%);
+  background-position: calc(100% - 12px) calc(1.2em), calc(100% - 8px) calc(1.2em);
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  padding-right: 36px;
+}
+
+/* Textarea size */
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Radios and checkboxes row */
+fieldset > input[type="radio"],
+fieldset > input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #2563eb;
+}
+
+fieldset > label + input[type="radio"],
+fieldset > label + input[type="checkbox"],
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  margin-right: 18px;
+}
+
+/* Terms row */
+#terms {
+  margin-right: 10px;
+}
+fieldset:last-of-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+}
+
+/* Buttons */
+button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.96rem;
+  font-weight: 700;
+  padding: 11px 18px;
+  margin-top: 14px;
+  margin-right: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button[type="submit"] {
+  color: #ffffff;
+  background: linear-gradient(120deg, #2563eb, #3b82f6);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.33);
+}
+
+button[type="reset"] {
+  color: #1e293b;
+  background: #e2e8f0;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button[type="submit"]:hover {
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.44);
+}
+
+button[type="reset"]:hover {
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.19);
+}
+
+/* Responsive behavior */
+@media (max-width: 640px) {
+  body {
+    padding: 16px;
+  }
+
+  form {
+    padding: 18px;
+  }
+
+  fieldset {
+    padding: 14px 12px 12px;
+  }
+
+  button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+}

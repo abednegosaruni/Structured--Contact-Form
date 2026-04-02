@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Structured Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form action="#" method="post">
+
+    <!--personal information-->
+<fieldset> 
+    <legend>Personal Information</legend><br>
+
+    <label for="Full name">Full Name: </label><br><br>
+    <input type="text" id="Full Name" placeholder="Enter your full name" required><br><br>
+    <label for="Email Address">Email Address: </label><br><br>
+    <input type="text" id="Email Address" placeholder="Enter your email address" required><br><br>
+    <label for="Phone Number">Phone Number: </label><br><br>
+    <input type="text" id="Phone Number" placeholder="Enter your phone number" required><br><br>
+    <Label for="Country">Country: </Label><br><br>
+    <input type="text" id="Country" placeholder="Enter your Country" required><br><br>
+</fieldset>
+<br><br>
+<!--Message Details-->
+<fieldset>
+    <legend>Message Details</legend><br>
+    <label for="subject">Subject: </label><br>
+
+    <select  id="subject"> 
+        <option>- -Select Option- -</option>
+        <option>General Inquiry</option>
+        <option>Technical Support</option>
+        <option>Feedback</option>
+        <option>Business Inquiry</option>
+        <option>Complaint</option>
+        <option>Other</option>
+    </select>
+    <br><br>
+<label for="message">Message: </label><br>
+<textarea name="message" placeholder="Enter your message here........." required></textarea>
+</fieldset>
+<br><br>
+<!--Preferences-->
+
+<fieldset>
+    <legend>Preferences</legend><br>
+    <label for="Preffered Contact Method">Preferred Contact Method: </label>
+    <br>
+    <input type="radio" id="Email" name="contact method" value="Email"> Email
+<br><br>
+<input type="radio" id="Phone" name="contact method" value="Phone"> Phone
+<br><br>
+<Label for="Services Interested In">Services Interested In: </Label><br><br>
+<input type="checkbox" name="Web Development" value="Web Development"> Web Development<br>
+<input type="checkbox" name="App Development" value="App Development"> App Development<br>
+<input type="checkbox" name="UI/UX Design" value="UI/UX Design"> UI/UX Design<br>
+<input type="checkbox" name="Digital Marketing" value="Digital Marketing"> Digital Marketing<br>
+</fieldset>
+<br><br>
+
+<!--Agreement-->
+
+<fieldset>
+    <legend>Agreement</legend><br>
+<input type="checkbox" id="terms" name="terms" required> I agree to the terms and conditions.
+
+</fieldset>
+<br><br>
+<!--buttons-->
+
+<button type="submit">Send Message</button>
+<button type="reset">Clear form</button>
+
+</form>
+
+</body>
+</html>
